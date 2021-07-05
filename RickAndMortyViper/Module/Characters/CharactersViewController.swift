@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class ViewController: UIViewController, UICollectionViewDelegate {
+class CharactersViewController: UIViewController, UICollectionViewDelegate {
 
     var chars = [CharacterResult]()
     var collectionView : UICollectionView!
@@ -57,7 +57,7 @@ class ViewController: UIViewController, UICollectionViewDelegate {
     }
 }
 
-extension ViewController : UICollectionViewDataSource {
+extension CharactersViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return chars.count

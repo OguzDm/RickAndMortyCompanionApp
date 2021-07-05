@@ -12,8 +12,8 @@ import Alamofire
 class Service {
     static let shared = Service()
     
-    func requestAF(completionHandler: @escaping(Result<CharacterModel,Error>) -> Void){
-        AF.request(Constants.baseUrl + "/character").responseDecodable(of:CharacterModel.self) { response in
+    func requestAF(completionHandler: @escaping(Result<CharactersModel,Error>) -> Void){
+        AF.request(Constants.baseUrl + "/character").responseDecodable(of:CharactersModel.self) { response in
             switch response.result {
             case .success(let model):
                 completionHandler(.success(model))
