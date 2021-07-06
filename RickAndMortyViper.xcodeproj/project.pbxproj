@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B994D67B2694F38300E3497C /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994D67A2694F38300E3497C /* Collection+Extensions.swift */; };
 		B995E294269345D9001EBF66 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B995E293269345D9001EBF66 /* Alamofire */; };
 		B995E29726934613001EBF66 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B995E29626934613001EBF66 /* SDWebImage */; };
 		B995E29926934613001EBF66 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = B995E29826934613001EBF66 /* SDWebImageMapKit */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B994D67A2694F38300E3497C /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		B9A0CC992693BC3500303F3F /* CharactersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersPresenter.swift; sourceTree = "<group>"; };
 		B9A0CC9B2693BC4700303F3F /* CharactersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersInteractor.swift; sourceTree = "<group>"; };
 		B9A0CC9D2693BC5E00303F3F /* CharactersRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRouter.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				B9C0CF222688CFD600B4435E /* Extension+UINib.swift */,
 				B9C0CF242688D01700B4435E /* Service.swift */,
 				B9C0CF262688D04600B4435E /* Constants.swift */,
+				B994D67A2694F38300E3497C /* Collection+Extensions.swift */,
 			);
 			path = RickAndMortyViper;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				B9FEDF4F2688988A00F775F7 /* AppDelegate.swift in Sources */,
 				B9C0CF232688CFD600B4435E /* Extension+UINib.swift in Sources */,
 				B9A0CC9C2693BC4700303F3F /* CharactersInteractor.swift in Sources */,
+				B994D67B2694F38300E3497C /* Collection+Extensions.swift in Sources */,
 				B9C0CF272688D04600B4435E /* Constants.swift in Sources */,
 				B9C0CF292688D46300B4435E /* CharactersModel.swift in Sources */,
 				B9FEDF512688988A00F775F7 /* SceneDelegate.swift in Sources */,

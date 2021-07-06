@@ -6,11 +6,11 @@
 //
 
 import Foundation
-
+//Presenter -> InteractorInterface
 protocol CharactersInteractorInterface {
     func fetchCharacters()
 }
-
+//Output -> Presenter
 protocol CharactersInteractorOutput: AnyObject {
     func handleCharsResult(_ result: [CharacterResult])
 }
