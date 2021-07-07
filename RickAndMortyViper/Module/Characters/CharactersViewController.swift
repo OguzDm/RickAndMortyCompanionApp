@@ -43,12 +43,12 @@ extension CharactersViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.reuseIdentifier, for: indexPath) as! CardCollectionViewCell
         cell.characterNameView.text = presenter.charForIndex(indexPath.item)?.name
         cell.characterImageView.sd_setImage(with: URL(string: presenter.charForIndex(indexPath.item)!.image), placeholderImage: UIImage(named: "placeholder"))
-        if presenter.charForIndex(indexPath.item)?.status == "Alive" {
-            cell.statusImageView.tintColor = .green
-        }
+        
+        cell.statusImageView.tintColor = UIColor(hex: presenter.returnColorForStatus(indexPath.item))
         return cell
     }
 }

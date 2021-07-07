@@ -10,6 +10,7 @@ protocol CharactersPresenterInterface {
     func viewDidLoad()
     var numberOfChars: Int {get}
     func charForIndex(_ index: Int) -> CharacterResult?
+    func returnColorForStatus(_ index: Int) -> String
 }
 final class CharactersPresenter {
     
@@ -26,6 +27,9 @@ final class CharactersPresenter {
     }
 }
 extension CharactersPresenter: CharactersPresenterInterface {
+    func returnColorForStatus(_ index: Int) -> String {
+        return (chars[safe: index]?.status == "Alive") ? "#00FF00FF" : "#FF0000FF"
+    }
     
     func charForIndex(_ index: Int) -> CharacterResult? {
         chars[safe: index]
