@@ -34,6 +34,11 @@ class CharactersViewController: UIViewController, UICollectionViewDelegate {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        presenter.willDisplay(indexPath.item)
+    }
 }
 
 extension CharactersViewController : UICollectionViewDataSource {
@@ -66,7 +71,5 @@ extension CharactersViewController: CharactersViewInterface {
         
         view.addSubview(collectionView)
     }
-    
-    
 }
 

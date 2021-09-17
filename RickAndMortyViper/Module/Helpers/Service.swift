@@ -8,14 +8,16 @@
 import Foundation
 import Alamofire
 
-
 class Service {
     static let shared = Service()
     
+    var next = Constants.baseCharUrl
+    
     func requestAF(completionHandler: @escaping(Result<CharactersModel,Error>) -> Void){
-        AF.request(Constants.baseUrl + "/character").responseDecodable(of:CharactersModel.self) { response in
+        AF.request(next).responseDecodable(of:CharactersModel.self) { response in
             switch response.result {
             case .success(let model):
+                self.next = model.info.next
                 completionHandler(.success(model))
             case .failure(let error):
                 print(error)

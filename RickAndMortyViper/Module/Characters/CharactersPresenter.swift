@@ -11,6 +11,7 @@ protocol CharactersPresenterInterface {
     var numberOfChars: Int {get}
     func charForIndex(_ index: Int) -> CharacterResult?
     func returnColorForStatus(_ index: Int) -> String
+    func willDisplay(_ index: Int)
 }
 final class CharactersPresenter {
     
@@ -27,6 +28,13 @@ final class CharactersPresenter {
     }
 }
 extension CharactersPresenter: CharactersPresenterInterface {
+    
+    func willDisplay(_ index: Int) {
+        if index == chars.count - 4 {
+            fetchChars()
+        }
+    }
+    
     func returnColorForStatus(_ index: Int) -> String {
         return (chars[safe: index]?.status == "Alive") ? "#00FF00FF" : "#FF0000FF"
     }
@@ -46,7 +54,7 @@ extension CharactersPresenter: CharactersPresenterInterface {
 }
 extension CharactersPresenter: CharactersInteractorOutput {
     func handleCharsResult(_ result: [CharacterResult]) {
-        chars = result
+        chars.append(contentsOf: result)
         DispatchQueue.main.async {
             self.view?.reloadData()
         }

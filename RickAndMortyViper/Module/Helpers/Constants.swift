@@ -8,5 +8,5 @@
 import Foundation
 
 class Constants {
-    static let baseUrl = "https://rickandmortyapi.com/api"
+    static let baseCharUrl = "https://rickandmortyapi.com/api/character"
 }

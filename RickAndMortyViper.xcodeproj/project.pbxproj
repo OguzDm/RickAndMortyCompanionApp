@@ -65,9 +65,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12EED22F26F486A800E7BD7B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B9C0CF222688CFD600B4435E /* Extension+UINib.swift */,
+				B9C0CF242688D01700B4435E /* Service.swift */,
+				B9C0CF262688D04600B4435E /* Constants.swift */,
+				B994D67A2694F38300E3497C /* Collection+Extensions.swift */,
+				B9D16E8F2695ED9B0045F6AE /* Extension+UIColor.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		12EED23026F486C800E7BD7B /* CharacterCard */ = {
+			isa = PBXGroup;
+			children = (
+				B9C0CF1E2688CCC500B4435E /* CardCollectionViewCell.swift */,
+				B9C0CF1F2688CCC500B4435E /* CardCollectionViewCell.xib */,
+			);
+			path = CharacterCard;
+			sourceTree = "<group>";
+		};
 		B9A0CC972693BBC700303F3F /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				12EED23026F486C800E7BD7B /* CharacterCard */,
+				12EED22F26F486A800E7BD7B /* Helpers */,
 				B9A0CC982693BBCD00303F3F /* Characters */,
 			);
 			path = Module;
@@ -111,13 +134,6 @@
 				B9FEDF572688988B00F775F7 /* Assets.xcassets */,
 				B9FEDF592688988B00F775F7 /* LaunchScreen.storyboard */,
 				B9FEDF5C2688988B00F775F7 /* Info.plist */,
-				B9C0CF1E2688CCC500B4435E /* CardCollectionViewCell.swift */,
-				B9C0CF1F2688CCC500B4435E /* CardCollectionViewCell.xib */,
-				B9C0CF222688CFD600B4435E /* Extension+UINib.swift */,
-				B9C0CF242688D01700B4435E /* Service.swift */,
-				B9C0CF262688D04600B4435E /* Constants.swift */,
-				B994D67A2694F38300E3497C /* Collection+Extensions.swift */,
-				B9D16E8F2695ED9B0045F6AE /* Extension+UIColor.swift */,
 			);
 			path = RickAndMortyViper;
 			sourceTree = "<group>";
